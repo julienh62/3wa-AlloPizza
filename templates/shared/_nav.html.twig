@@ -9,13 +9,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Commande</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Connexion</a>
-                        <a class="dropdown-item" href="#">Enregistrement</a>
-                    </div>
-                </li>
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ path('app_login') }}">Connexion</a>
+                            <a class="dropdown-item" href="#">Enregistrement</a>
+                        </div>
+                    </li>
+                {% endif %}
                 <li class="nav-item">
                     <a class="nav-link" href="#">🛒</a>
                 </li>
