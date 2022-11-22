@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+    <h1>Choisis ta pizza</h1>
+
+    <div class="row">
+        <div class="col-8">
+            {% include('product/shared/_index.html.twig') %}
+        </div>
+        <div class="col-4">commande</div>
+    </div>
+{% endblock %}

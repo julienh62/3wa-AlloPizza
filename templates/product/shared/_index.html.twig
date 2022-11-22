@@ -1,0 +1,23 @@
+<div class="row">
+    {% for product in products %}
+        <div class="col-4">
+            <div class="card mb-3">
+                <h3 class="card-header">{{ product.name }}</h3>
+                <img src="{{ product.image }}" alt="name-product">
+                <ul class="list-group list-group-flush">
+                    {% for ingredient in product.ingredients  %}
+                        <li class="list-group-item">{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="card-body">
+                    <span class="badge rounded-pill bg-success">-</span>
+                    <span class="badge rounded-pill bg-secondary">0</span>
+                    <span class="badge rounded-pill bg-success">+</span>                </div>
+                <div class="card-footer text-muted">
+                   {{ product.price /100 }} €
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
