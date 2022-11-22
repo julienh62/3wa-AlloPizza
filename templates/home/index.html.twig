@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}AlloPizza{% endblock %}
 
 {% block body %}
     <h1>AlloPizza</h1>
     <p>Bienvenue Chez AlloPizza</p>
-    <p>Cliquez <a href="#">ici</a> pour commander</p>
+    <p>Cliquez <a href="{{ path('app_products') }}">ici</a> pour commander</p>
 {% endblock %}
